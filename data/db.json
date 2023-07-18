@@ -1,14 +1,3 @@
 {
-  "tasks": [
-    {
-      "body": "Finish assesment",
-      "id": "62a22c2d-70a0-e737-33d3-ee86a43f3eae",
-      "progress": "false"
-    },
-    {
-      "body": "happy",
-      "id": "abed4047-1850-a5bb-2597-f644a876eae3",
-      "progress": "false"
-    }
-  ]
+  "tasks": []
 }

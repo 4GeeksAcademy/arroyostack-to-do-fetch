@@ -5,7 +5,7 @@ import theBass from '../assets/audio/all-about-bass.mp4';
 export const AudioComponent = ({ image }) => {
     return (
         <>
-            <div className="text-center">
+            <div className="text-center d-block">
                 <h1 className="fs-1 text-warning">YOU'VE DONE IT!!!</h1>
                 <h6 className=" text-warning">PLAY THE SONG!!!</h6>
             </div>

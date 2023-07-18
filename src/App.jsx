@@ -6,8 +6,9 @@ import uuid from 'react-uuid';
 import { SiteHeader } from './components/SiteHeader';
 import { InputComponent } from './components/InputComponent';
 import { TasksViewer } from './components/TasksViewer';
-import { Footer } from './components/Footer';
 import { AudioComponent } from './components/audioComponent';
+import { AuthorComponent } from './components/AuthorComponent';
+
 
 
 // HELPER FUNCTIONS
@@ -16,6 +17,8 @@ import { addTask } from './helpers/addTask';
 import { deleteTask } from './helpers/deleteTask';
 import { updateProgress } from './helpers/updateProgress';
 import { allTaskTrue } from './helpers/allTaskTrue';
+
+
 
 
 
@@ -71,31 +74,30 @@ const App = () => {
 
   return (
     <>
-      < SiteHeader />
-      <InputComponent onNewTask={ onNewTask } className="w-100" placeholder={ placeholder } />
-      { everyTasks && tasks.length > 0 ? <AudioComponent /> : null }
-
-      <header className="">
-        <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-          <div className="d-flex justify-content-center">
-            <div className="text-center">
-
-              <TasksViewer handleProgress={ handleProgress } tasks={ tasks } handleDelete={ handleDelete } />
-            </div>
-          </div>
-        </div>
-      </header >
+      <div className='pt-5'>
+        <AuthorComponent />
+      </div>
       {/* Header Component */ }
+      <div className='pt-5'>
+        < SiteHeader />
 
+      </div>
+      {/* End of Header Component */ }
 
-      {/* Input Component */ };
+      {/* Input Component */ }
+      <InputComponent onNewTask={ onNewTask } className="w-100" placeholder={ placeholder } />
+      {/* End of Input Component */ }
 
+      {/* Audio Component */ }
+      { everyTasks && tasks.length > 0 ? <AudioComponent /> : null }
+      {/* End of Audio Component */ }
 
       {/* Todos List View Component */ }
+      <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <TasksViewer handleProgress={ handleProgress } tasks={ tasks } handleDelete={ handleDelete } />
+      </div>
+      {/* Enf of Todos List View Component */ }
 
-
-      {/* Footer */ }
-      <Footer />
     </>
   );
 };
