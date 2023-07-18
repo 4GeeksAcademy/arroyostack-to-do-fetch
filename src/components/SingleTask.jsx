@@ -11,9 +11,9 @@ export const SingleTask = ({ tasks, handleDelete, handleProgress }) => {
                 { tasks.length > 0 && tasks.map(task => {
                     return (
                         <>
-                            <div key={ task.id } className="row text-white border mb-2 actions-show-hide">
-                                <li className="text-start col-6 list-group-item bg-white border-0 pt-3">{ task.body }</li>
-                                <div className="col-6 text-end  bg-white show-hide-component">
+                            <div key={ task.id } className="row text-white border mb-2 actions-show-hide bg-light">
+                                <li className="text-start col-6 list-group-item bg-light border-0 pt-3">{ task.body }</li>
+                                <div className="col-6 text-end show-hide-component">
                                     <ActionsBar handleProgress={ handleProgress } handleDelete={ handleDelete } task={ task } />
                                 </div>
                             </div>
