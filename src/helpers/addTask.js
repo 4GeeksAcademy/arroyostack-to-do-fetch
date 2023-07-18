@@ -10,7 +10,8 @@ export const addTask = async (task, id) => {
 
     const raw = JSON.stringify({
         "body": task,
-        "id": id
+        "id": id,
+        "progress": "false"
     });
 
     const requestOptions = {

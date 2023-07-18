@@ -1,6 +1,6 @@
 export const getTasks = async () => {
     const url = "http://localhost:8000/";
-    const endpoint = "tasks";
+    const endpoint = "tasks/";
 
     try {
         const response = await fetch(url + endpoint);

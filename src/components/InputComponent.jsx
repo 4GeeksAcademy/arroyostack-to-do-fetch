@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const InputComponent = ({ onNewTask }) => {
+export const InputComponent = ({ onNewTask, placeholder }) => {
 
     const [ inputValue, setinputValue ] = useState('');
 
@@ -20,11 +20,17 @@ export const InputComponent = ({ onNewTask }) => {
 
     return (
         <form action="" onSubmit={ onSubmit }>
-            <input
-                type="text"
-                value={ inputValue }
-                onChange={ onInputChange }
-            />
+            <div className="input-group mb-3 container">
+
+                <input type="text"
+                    className="form-control text-center"
+                    placeholder={ placeholder }
+                    value={ inputValue }
+                    onChange={ onInputChange }
+                />
+            </div>
+
+
         </form>
 
     );
