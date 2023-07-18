@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
+import { SingleTask } from "./SingleTask";
 
-export const TasksViewer = ({ tasks }) => {
+
+export const TasksViewer = ({ tasks, handleDelete, handleProgress }) => {
 
     return (
         <>
-
-            { tasks.length > 0 && todos.map((task, i) => {
-                return (
-                    <div key={ i }>
-                        <h1 >{ task.body }</h1>
-                    </div>
-                );
-
-            }) }
-
+            <div className="card" style={ { width: "25rem" } }>
+                <SingleTask handleProgress={ handleProgress } tasks={ tasks } handleDelete={ handleDelete } />
+            </div>
         </>
     );
 };
