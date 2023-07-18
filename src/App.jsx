@@ -9,9 +9,18 @@ import { addTask } from './helpers/addTask';
 
 
 const App = () => {
+  const [ tasks, setTasks ] = useState([]);
+
+
+  useEffect(() => {
+    getTasks().then(data => setTasks(data));
+
+  }, []);
+
 
   return (
     <>
+      { tasks.map((task, i) => task.body) }
 
       {/* Header Component */ }
       <SiteHeader />
