@@ -1,5 +1,18 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 body {
-    background: url('https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+li {
+    list-style: none;
+}
+
+.actions-show-hide .show-hide-component {
+    visibility: hidden;
+}
+
+.actions-show-hide:hover .show-hide-component {
+    visibility: visible;
 }
