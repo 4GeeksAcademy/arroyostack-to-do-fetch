@@ -4,7 +4,9 @@
     <br>
     <h2>How to start this project</h2>
     <code>yarn install</code>
+    <br>
     <code>npx json-server --watch data/db.json --port 8000</code>
+    <br>
     <code>yarn dev</code>
     <br>
     <h6>Documentation in progress</h6>
