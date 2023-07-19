@@ -1,6 +1,5 @@
 export const addTask = async (task, id) => {
 
-
     const url = "http://localhost:8000/";
     const endpoint = "tasks";
 
@@ -31,10 +30,6 @@ export const addTask = async (task, id) => {
         console.log(err, "This was catch by catch block 'addTask'");
 
     }
-
-
-
-
 }
 
 

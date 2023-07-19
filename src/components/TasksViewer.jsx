@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import { SingleTask } from "./SingleTask";
 
@@ -11,4 +12,11 @@ export const TasksViewer = ({ tasks, handleDelete, handleProgress }) => {
             </div>
         </>
     );
+};
+
+
+TasksViewer.propTypes = {
+    tasks: PropTypes.array.isRequired,
+    handleDelete: PropTypes.func.isRequired,
+    handleProgress: PropTypes.func.isRequired
 };

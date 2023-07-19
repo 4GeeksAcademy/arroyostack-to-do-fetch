@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ActionsBar } from "./ActionsBar";
 
 
@@ -5,7 +6,6 @@ import { ActionsBar } from "./ActionsBar";
 export const SingleTask = ({ tasks, handleDelete, handleProgress }) => {
 
     return (
-
         <>
             <ul className="list-group">
                 { tasks.length > 0 && tasks.map(task => {
@@ -23,4 +23,10 @@ export const SingleTask = ({ tasks, handleDelete, handleProgress }) => {
             </ul>
         </>
     );
+};
+
+SingleTask.propTypes = {
+    tasks: PropTypes.array.isRequired,
+    handleDelete: PropTypes.func.isRequired,
+    handleProgress: PropTypes.func.isRequired
 };

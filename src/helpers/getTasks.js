@@ -5,7 +5,6 @@ export const getTasks = async () => {
     try {
         const response = await fetch(url + endpoint);
         const data = await response.json();
-        // return data;
 
         return data;
 

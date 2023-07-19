@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 
 export const InputComponent = ({ onNewTask, placeholder }) => {
 
-    const [ inputValue, setinputValue ] = useState('');
+    const [ inputValue, setInputValue ] = useState('');
 
     const onInputChange = ({ target }) => {
-        setinputValue(target.value);
+        setInputValue(target.value);
     };
 
     const onSubmit = (event) => {
@@ -14,7 +15,9 @@ export const InputComponent = ({ onNewTask, placeholder }) => {
         const input = inputValue.trim();
 
         if(input.length <= 1) return;
-        setinputValue('');
+
+        setInputValue('');
+
         onNewTask(input);
     };
 
@@ -29,9 +32,16 @@ export const InputComponent = ({ onNewTask, placeholder }) => {
                     onChange={ onInputChange }
                 />
             </div>
-
-
         </form>
 
     );
+};
+
+InputComponent.propTypes = {
+    onNewTask: PropTypes.func.isRequired,
+    placeholder: PropTypes.string.isRequired
+};
+
+InputComponent.defaultProps = {
+    placeholder: 'Add a new task'
 };
