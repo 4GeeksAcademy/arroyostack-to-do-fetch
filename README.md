@@ -11,4 +11,7 @@
     <code>yarn dev</code>
     <br>
     <h6>Documentation in progress</h6>
+
+
+    <h2>Made with peace and love by arroyostack mind.</h2>
 </div>
