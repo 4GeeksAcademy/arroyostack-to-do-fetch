@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ActionsBar } from "./ActionsBar";
 
 
@@ -23,4 +24,10 @@ export const SingleTask = ({ tasks, handleDelete, handleProgress }) => {
             </ul>
         </>
     );
+};
+
+SingleTask.propTypes = {
+    tasks: PropTypes.array.isRequired,
+    handleDelete: PropTypes.func.isRequired,
+    handleProgress: PropTypes.func.isRequired
 };

@@ -1,8 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-import theBass from '../assets/audio/all-about-bass.mp4';
-
-export const AudioComponent = ({ image }) => {
+export const AudioComponent = ({ song, songImage }) => {
     return (
         <>
             <div className="text-center d-block">
@@ -14,12 +12,12 @@ export const AudioComponent = ({ image }) => {
 
                     <div className="card">
                         <div >
-                            <img className="card-img-top" src="https://i.pinimg.com/originals/a7/c3/d2/a7c3d2d5f3d82151594ae72f89cf467c.gif"
+                            <img className="card-img-top" src={ songImage }
                                 alt="Celebrating dancing guy" />
                         </div>
                         <div className="card-body text-center bg-warning">
                             <audio id="music" preload="true" controls>
-                                <source src={ theBass } />
+                                <source src={ song } />
                             </audio>
                         </div>
                     </div>
@@ -28,4 +26,10 @@ export const AudioComponent = ({ image }) => {
             </div>
         </>
     );
+};
+
+AudioComponent.propTypes = {
+    song: PropTypes.any.isRequired,
+    songImage: PropTypes.string.isRequired
+
 };

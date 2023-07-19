@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const ActionsBar = ({ handleDelete, handleProgress, task }) => {
     return (
         <>
@@ -9,3 +11,11 @@ export const ActionsBar = ({ handleDelete, handleProgress, task }) => {
         </>
     );
 };
+
+ActionsBar.propTypes = {
+    handleDelete: PropTypes.func.isRequired,
+    handleProgress: PropTypes.func.isRequired,
+    task: PropTypes.object
+};
+
+

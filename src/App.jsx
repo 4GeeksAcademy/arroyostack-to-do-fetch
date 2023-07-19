@@ -9,6 +9,8 @@ import { TasksViewer } from './components/TasksViewer';
 import { AudioComponent } from './components/audioComponent';
 import { AuthorComponent } from './components/AuthorComponent';
 
+// import { SiteHeader,InputComponent, TasksViewer,AudioComponent, AuthorComponent } from './components/componentIndex';
+
 
 
 // HELPER FUNCTIONS
@@ -18,11 +20,11 @@ import { deleteTask } from './helpers/deleteTask';
 import { updateProgress } from './helpers/updateProgress';
 import { allTaskTrue } from './helpers/allTaskTrue';
 
+// Songs
+import theBass from './assets/audio/all-about-bass.mp4';
 
+const songImage = 'https://i.pinimg.com/originals/a7/c3/d2/a7c3d2d5f3d82151594ae72f89cf467c.gif';
 
-
-
-const placeholder = "I need to do...";
 const App = () => {
   const [ tasks, setTasks ] = useState([]);
 
@@ -68,35 +70,44 @@ const App = () => {
 
   };
 
-  // useEffect(() => {
-  //   getTasks().then(data => setTasks(data));
-  // }, [ onNewTask ]);
-
   return (
     <>
+      {/* Author Component */ }
       <div className='pt-5'>
-        <AuthorComponent />
+        <AuthorComponent
+          authorName="arroyostack"
+          url="https://github.com/arroyostack" />
       </div>
+
+
       {/* Header Component */ }
       <div className='pt-5'>
-        < SiteHeader />
-
+        < SiteHeader
+          heading="What needs to be done"
+          subHeading="Complete all your task and get a special gift."
+        />
       </div>
-      {/* End of Header Component */ }
 
       {/* Input Component */ }
-      <InputComponent onNewTask={ onNewTask } className="w-100" placeholder={ placeholder } />
-      {/* End of Input Component */ }
+      <InputComponent
+        onNewTask={ onNewTask }
+        className="w-100"
+        placeholder="I need to..." />
 
       {/* Audio Component */ }
-      { everyTasks && tasks.length > 0 ? <AudioComponent /> : null }
-      {/* End of Audio Component */ }
+      { everyTasks && tasks.length > 0 ?
+        <AudioComponent
+          song={ theBass }
+          songImage={ songImage } /> : null }
 
-      {/* Todos List View Component */ }
+      {/* Tasks List View Component */ }
       <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <TasksViewer handleProgress={ handleProgress } tasks={ tasks } handleDelete={ handleDelete } />
+        <TasksViewer
+          handleProgress={ handleProgress }
+          tasks={ tasks }
+          handleDelete={ handleDelete } />
       </div>
-      {/* Enf of Todos List View Component */ }
+
 
     </>
   );

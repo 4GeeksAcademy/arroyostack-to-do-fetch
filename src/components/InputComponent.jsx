@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 
 export const InputComponent = ({ onNewTask, placeholder }) => {
@@ -29,9 +30,16 @@ export const InputComponent = ({ onNewTask, placeholder }) => {
                     onChange={ onInputChange }
                 />
             </div>
-
-
         </form>
 
     );
+};
+
+InputComponent.propTypes = {
+    onNewTask: PropTypes.func.isRequired,
+    placeholder: PropTypes.string.isRequired
+};
+
+InputComponent.defaultProps = {
+    placeholder: 'Add a new task'
 };
