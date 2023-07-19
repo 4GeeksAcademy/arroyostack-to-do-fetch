@@ -9,7 +9,6 @@ export const AudioComponent = ({ song, songImage }) => {
             </div>
             <div className="container d-flex justify-content-center my-4 mb-5" style={ { width: "18rem" } }>
                 <div id="mobile-box">
-
                     <div className="card">
                         <div >
                             <img className="card-img-top" src={ songImage }
@@ -21,7 +20,6 @@ export const AudioComponent = ({ song, songImage }) => {
                             </audio>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>

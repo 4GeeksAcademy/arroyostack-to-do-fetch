@@ -3,10 +3,10 @@ import { useState } from "react";
 
 export const InputComponent = ({ onNewTask, placeholder }) => {
 
-    const [ inputValue, setinputValue ] = useState('');
+    const [ inputValue, setInputValue ] = useState('');
 
     const onInputChange = ({ target }) => {
-        setinputValue(target.value);
+        setInputValue(target.value);
     };
 
     const onSubmit = (event) => {
@@ -15,7 +15,9 @@ export const InputComponent = ({ onNewTask, placeholder }) => {
         const input = inputValue.trim();
 
         if(input.length <= 1) return;
-        setinputValue('');
+
+        setInputValue('');
+
         onNewTask(input);
     };
 
