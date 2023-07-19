@@ -8,7 +8,7 @@ import { SiteHeader, InputComponent, TasksViewer, AudioComponent, AuthorComponen
 // HELPER FUNCTIONS
 import { getTasks, addTask, deleteTask, updateProgress, allTaskTrue } from './helpers';
 
-// Songs
+// Song
 import theBass from './assets/audio/all-about-bass.mp4';
 
 const songImage = 'https://i.pinimg.com/originals/a7/c3/d2/a7c3d2d5f3d82151594ae72f89cf467c.gif';
@@ -23,7 +23,6 @@ const App = () => {
 
   useEffect(() => {
     getTasks().then(data => setTasks(data));
-
   }, []);
 
   useEffect(() => {
@@ -79,7 +78,6 @@ const App = () => {
       {/* Input Component */ }
       <InputComponent
         onNewTask={ onNewTask }
-        className="w-100"
         placeholder="I need to..." />
 
       {/* Audio Component */ }
