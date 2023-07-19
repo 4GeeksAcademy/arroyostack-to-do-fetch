@@ -5,14 +5,8 @@ import uuid from 'react-uuid';
 // COMPONENTS
 import { SiteHeader, InputComponent, TasksViewer, AudioComponent, AuthorComponent } from './components';
 
-
-
 // HELPER FUNCTIONS
-import { getTasks } from './helpers/getTasks';
-import { addTask } from './helpers/addTask';
-import { deleteTask } from './helpers/deleteTask';
-import { updateProgress } from './helpers/updateProgress';
-import { allTaskTrue } from './helpers/allTaskTrue';
+import { getTasks, addTask, deleteTask, updateProgress, allTaskTrue } from './helpers';
 
 // Songs
 import theBass from './assets/audio/all-about-bass.mp4';
