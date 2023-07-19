@@ -3,13 +3,7 @@ import { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 
 // COMPONENTS
-import { SiteHeader } from './components/SiteHeader';
-import { InputComponent } from './components/InputComponent';
-import { TasksViewer } from './components/TasksViewer';
-import { AudioComponent } from './components/audioComponent';
-import { AuthorComponent } from './components/AuthorComponent';
-
-// import { SiteHeader,InputComponent, TasksViewer,AudioComponent, AuthorComponent } from './components/componentIndex';
+import { SiteHeader, InputComponent, TasksViewer, AudioComponent, AuthorComponent } from './components';
 
 
 
