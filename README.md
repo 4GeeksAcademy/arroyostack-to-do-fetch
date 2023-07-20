@@ -18,4 +18,5 @@
 
 
 </div>
-#Made with peace and love by arroyostack mind.
+
+Made with love by arroyostack mind.
