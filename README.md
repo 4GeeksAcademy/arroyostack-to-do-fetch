@@ -16,5 +16,6 @@
     <p>Bear in mind that tasks client will be write in on project folder data/db.json</p>
 
 
-    #Made with peace and love by arroyostack mind.
+
 </div>
+#Made with peace and love by arroyostack mind.
